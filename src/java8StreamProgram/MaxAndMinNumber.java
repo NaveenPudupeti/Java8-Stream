@@ -19,7 +19,8 @@ public class MaxAndMinNumber {
         Integer min =numbers.stream()
         		
         		.min(Comparator.naturalOrder())
-                .orElseThrow(()-> new IllegalArgumentException("List is empty:"));
+               
+        		.orElseThrow(()-> new IllegalArgumentException("List is empty:"));
         
         System.out.println(max);
         System.out.println(min);

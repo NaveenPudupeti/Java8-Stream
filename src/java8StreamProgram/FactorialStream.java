@@ -1,6 +1,7 @@
 package java8StreamProgram;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
 public class FactorialStream {
@@ -11,7 +12,7 @@ public class FactorialStream {
 		Scanner num = new Scanner(System.in);
 		System.out.println("Enter your number");
 		int number =num.nextInt();
-		long factorial = LongStream.rangeClosed(1, number)
+		int factorial = IntStream.rangeClosed(1, number)
 				.reduce(1, (a,b) -> a*b);
 		System.out.println("Factorial of"+number+"is:"+factorial);
 
@@ -19,6 +20,7 @@ public class FactorialStream {
 
 }
 
+//5*4*3*2*1=120
 /*
 LongStream.rangeClosed(1, number):
 
